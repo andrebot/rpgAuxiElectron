@@ -4,7 +4,7 @@
   "description": "System to support Master and Players to play RPG remotely or in the same place",
   "main": "src/index.js",
   "scripts": {
-    "start": "gulp copy:materialize && electron src/index.js"
+    "start": "gulp build && electron src/index.js"
   },
   "repository": {
     "type": "git",
