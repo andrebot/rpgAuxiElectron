@@ -6,15 +6,11 @@ const Window = {
   config: {},
   view: null,
   pwd: '',
-  init,
   open
 };
 
-function init() {
-  this.view = new BrowserWindow(this.config);
-}
-
 function open() {
+  this.view = new BrowserWindow(this.config);
   this.view.loadURL(`file://${this.pwd}/index.html`);
 }
 
