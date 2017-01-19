@@ -9,4 +9,4 @@ const runSequence = require('run-sequence');
 // =======================
 requireDir('./gulp/tasks', { recurse: true });
 
-gulp.task('build', (cb) => runSequence(['copy:materialize'], cb));
+gulp.task('build', (cb) => runSequence(['clean:lib'], ['copy:materialize', 'copy:jquery', 'copy:hammer'], cb));

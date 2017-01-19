@@ -5,6 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "start": "gulp build && electron src/index.js",
+    "build": "gulp build",
     "test": "gulp test",
     "test:coverage": "gulp test:coverage"
   },
@@ -32,6 +33,7 @@
     "gulp": "^3.9.1",
     "gulp-istanbul": "^1.1.1",
     "gulp-mocha": "^3.0.1",
+    "jquery": "^3.1.1",
     "mocha": "^3.2.0",
     "mock-require": "^2.0.1",
     "require-dir": "^0.3.1",
