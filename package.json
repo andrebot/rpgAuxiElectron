@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "start": "gulp build && electron src/index.js",
-    "test": "gulp test"
+    "test": "gulp test",
+    "test:coverage": "gulp test:coverage"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.9.0",
     "gulp": "^3.9.1",
+    "gulp-istanbul": "^1.1.1",
     "gulp-mocha": "^3.0.1",
     "mocha": "^3.2.0",
     "mock-require": "^2.0.1",
