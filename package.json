@@ -4,7 +4,8 @@
   "description": "System to support Master and Players to play RPG remotely or in the same place",
   "main": "src/index.js",
   "scripts": {
-    "start": "gulp build && electron src/index.js"
+    "start": "gulp build && electron src/index.js",
+    "test": "gulp test"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   },
   "homepage": "https://github.com/andrebot/rpgAuxiElectron#readme",
   "devDependencies": {
+    "chai": "^3.5.0",
     "electron": "^1.4.14",
     "eslint": "^3.13.1",
     "eslint-config-airbnb": "^14.0.0",
@@ -27,8 +29,12 @@
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.9.0",
     "gulp": "^3.9.1",
+    "gulp-mocha": "^3.0.1",
+    "mocha": "^3.2.0",
     "require-dir": "^0.3.1",
-    "run-sequence": "^1.2.2"
+    "run-sequence": "^1.2.2",
+    "sinon": "^1.17.7",
+    "sinon-chai": "^2.8.0"
   },
   "dependencies": {
     "materialize-css": "^0.97.8"
