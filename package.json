@@ -2,9 +2,9 @@
   "name": "rpgauxielectron",
   "version": "1.0.0",
   "description": "System to support Master and Players to play RPG remotely or in the same place",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron src/index.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,13 @@
   "bugs": {
     "url": "https://github.com/andrebot/rpgAuxiElectron/issues"
   },
-  "homepage": "https://github.com/andrebot/rpgAuxiElectron#readme"
+  "homepage": "https://github.com/andrebot/rpgAuxiElectron#readme",
+  "devDependencies": {
+    "electron": "^1.4.14",
+    "eslint": "^3.13.1",
+    "eslint-config-airbnb": "^14.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-react": "^6.9.0"
+  }
 }

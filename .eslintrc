@@ -1,0 +1,16 @@
+{
+  "rules": {
+    "strict": 0,
+    "generator-star-spacing": 0,
+    "comma-dangle": 0,
+    "no-console": 0,
+    "no-underscore-dangle": 0,
+    "max-len": ["error", 150],
+    "no-plusplus": 0,
+    "import/no-dynamic-require": 0,
+    "func-names": ["error", "as-needed"],
+    "arrow-parens": ["error", "always"],
+    "import/no-extraneous-dependencies": 0
+  },
+  "extends": "airbnb"
+}
