@@ -8,6 +8,7 @@ const mockRequire = require('mock-require');
 mockRequire('electron', {
   BrowserWindow: function Brow() {
     this.loadURL = sinon.spy();
+    this.toggleDevTools = sinon.spy();
   }
 });
 
@@ -33,9 +34,17 @@ describe('Window', function() {
     this.window.open.should.exist;
   });
 
-  it('should be able to open itself', function() {
+  it('should be able to open itself without the devtools', function() {
     this.window.open();
 
     this.window.view.loadURL.should.have.been.calledOnce;
+    this.window.view.toggleDevTools.should.have.not.been.called;
+  });
+
+  it('should be able to open itself with the devtools', function() {
+    this.window.open(true);
+
+    this.window.view.loadURL.should.have.been.calledOnce;
+    this.window.view.toggleDevTools.should.have.been.calledOnce;
   });
 });
