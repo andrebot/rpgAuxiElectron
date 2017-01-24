@@ -2,9 +2,9 @@
 
 const { Menu } = require('electron');
 const Window = require('../window');
-// const CreateDivinity = require('../createDivinity');
+const CreateDivinity = require('../createDivinity');
 
-const _createDivinityView = null;// = CreateDivinity();
+const _createDivinityView = CreateDivinity();
 const _config = {
   width: 800,
   heigth: 600
@@ -31,19 +31,12 @@ const MainWindow = {
 };
 
 function init() {
-  // _setEvents(ipcMain);
   _configMenu();
 }
 
 function _openCreateDivinity() {
   _createDivinityView.open();
 }
-
-// function _setEvents(ipcMain) {
-//   ipcMain.on('openCreateDivinity', () => {
-//     _createDivinityView.open();
-//   });
-// }
 
 function _configMenu() {
   Menu.setApplicationMenu(Menu.buildFromTemplate(_menuTemplate));

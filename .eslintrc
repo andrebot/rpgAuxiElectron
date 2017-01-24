@@ -13,5 +13,9 @@
     "arrow-parens": ["error", "always"],
     "import/no-extraneous-dependencies": 0
   },
+  "globals": {
+    "$": true,
+    "document": true
+  },
   "extends": "airbnb"
 }

@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Divinity</title>
+
+    <link rel="stylesheet" type="text/css" href="../lib/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class="row">
+      <h4 class="col s12">Create your Divinity:</h4>
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="name" name="name" type="text" class="validate" />
+            <label for="name">Divinity's name</label>
+          </div>
+          <div class="col s12">
+            <h6>Choose the Divinity's alignment:</h6>
+            <div class="col s12 alignment-first-line">
+              <div class="col s12 m4">
+                <input id="Good" name="alignment1" type="radio"/>
+                <label for="Good">Good</label>
+              </div>
+              <div class="col s12 m4">
+                <input id="Neutral" name="alignment1" type="radio" checked/>
+                <label for="Neutral">Neutral</label>
+              </div>
+              <div class="col s12 m4">
+                <input id="Evil" name="alignment1" type="radio"/>
+                <label for="Evil">Evil</label>
+              </div>
+            </div>
+            <div class="col s12 alignment-second-line">
+              <div class="col s12 m4">
+                <input id="Lawful" name="alignment2" type="radio"/>
+                <label for="Lawful">Lawful</label>
+              </div>
+              <div class="col s12 m4">
+                <input id="Neutral2" name="alignment2" type="radio" checked/>
+                <label for="Neutral2">Neutral</label>
+              </div>
+              <div class="col s12 m4">
+                <input id="Chaotic" name="alignment2" type="radio"/>
+                <label for="Chaotic">Chaotic</label>
+              </div>
+            </div>
+          </div>
+          <a class="col s12 waves-effect waves-light btn">Salvar</a>
+        </div>
+      </form>
+    </div>
+
+    <script type="text/javascript" src="../lib/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../lib/js/hammer.min.js"></script>
+    <script type="text/javascript" src="../lib/js/materialize.min.js"></script>
+    <script type="text/javascript" src="view.js"></script>
+  </body>
+</html>
