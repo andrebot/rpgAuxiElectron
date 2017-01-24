@@ -10,10 +10,12 @@ const Window = {
   toggleDevTools
 };
 
-function open() {
+function open(openDevTools = false) {
   this.view = new BrowserWindow(this.config);
   this.view.loadURL(`file://${this.pwd}/index.html`);
-  this.toggleDevTools();
+  if (openDevTools) {
+    this.toggleDevTools();
+  }
 }
 
 function toggleDevTools() {

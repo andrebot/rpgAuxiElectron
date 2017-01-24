@@ -35,7 +35,7 @@ function init() {
 }
 
 function _openCreateDivinity() {
-  _createDivinityView.open();
+  _createDivinityView.open(true);
 }
 
 function _configMenu() {
