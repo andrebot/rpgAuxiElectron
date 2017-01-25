@@ -21,11 +21,11 @@
         const choices = ['ActionScript', 'AppleScript', 'Asp'];
         const matches = [];
 
-        for (let i = 0; i < choices.length; i++) {
-          if (choices[i].toLowerCase().indexOf(lowTerms) >= 0) {
-            matches.push(choices[i]);
+        choices.forEach((choise) => {
+          if (choise.toLowerCase().indexOf(lowTerms) >= 0) {
+            matches.push(choise);
           }
-        }
+        });
 
         suggest(matches);
       }
