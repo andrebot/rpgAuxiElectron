@@ -2,9 +2,9 @@
 
 const { Menu } = require('electron');
 const Window = require('../window');
-const CreateDivinity = require('../createDivinity');
+const CreateDeity = require('../createDeity');
 
-const _createDivinityView = CreateDivinity();
+const _createDeityView = CreateDeity();
 const _config = {
   width: 800,
   heigth: 600
@@ -18,7 +18,7 @@ const _menuTemplate = [
         submenu: [
           {
             label: 'Create',
-            click: _openCreateDivinity
+            click: _openCreateDeity
           }
         ]
       }
@@ -34,8 +34,8 @@ function init() {
   _configMenu();
 }
 
-function _openCreateDivinity() {
-  _createDivinityView.open(true);
+function _openCreateDeity() {
+  _createDeityView.open(true);
 }
 
 function _configMenu() {
