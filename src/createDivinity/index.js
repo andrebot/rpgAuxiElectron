@@ -3,10 +3,10 @@
 const Window = require('../window');
 
 const config = {
-  width: 300,
-  height: 465,
-  minWidth: 300,
-  minHeight: 465
+  width: 400,
+  height: 585,
+  minWidth: 400,
+  minHeight: 585
 };
 
 const CreateDivinityWindow = {

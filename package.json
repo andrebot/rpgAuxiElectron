@@ -24,7 +24,6 @@
   "homepage": "https://github.com/andrebot/rpgAuxiElectron#readme",
   "devDependencies": {
     "chai": "^3.5.0",
-    "electron": "^1.4.14",
     "eslint": "^3.13.1",
     "eslint-config-airbnb": "^14.0.0",
     "eslint-plugin-import": "^2.2.0",
@@ -33,7 +32,6 @@
     "gulp": "^3.9.1",
     "gulp-istanbul": "^1.1.1",
     "gulp-mocha": "^3.0.1",
-    "jquery": "^3.1.1",
     "mocha": "^3.2.0",
     "mock-require": "^2.0.1",
     "require-dir": "^0.3.1",
@@ -42,6 +40,9 @@
     "sinon-chai": "^2.8.0"
   },
   "dependencies": {
+    "electron": "^1.4.14",
+    "jquery": "^3.1.1",
+    "js-autocomplete-tremby": "^1.0.5",
     "materialize-css": "^0.97.8"
   }
 }

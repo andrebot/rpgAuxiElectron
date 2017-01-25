@@ -2,58 +2,100 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Divinity</title>
+    <title>Create Deity</title>
 
     <link rel="stylesheet" type="text/css" href="../lib/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="../lib/css/auto-complete.css">
+    <link rel="stylesheet" type="text/css" href="../lib/css/material-icons.css">
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
     <div class="row">
-      <h4 class="col s12">Create your Divinity:</h4>
+      <h4 class="col s12">Create your Deity:</h4>
       <form class="col s12">
         <div class="row">
           <div class="input-field col s12">
             <input id="name" name="name" type="text" class="validate" />
-            <label for="name">Divinity's name</label>
+            <label for="name">Deity's name</label>
           </div>
           <div class="col s12">
-            <h6>Choose the Divinity's alignment:</h6>
-            <div class="col s12 alignment-first-line">
-              <div class="col s12 m4">
-                <input id="Good" name="alignment1" type="radio"/>
-                <label for="Good">Good</label>
-              </div>
-              <div class="col s12 m4">
-                <input id="Neutral" name="alignment1" type="radio" checked/>
-                <label for="Neutral">Neutral</label>
-              </div>
-              <div class="col s12 m4">
-                <input id="Evil" name="alignment1" type="radio"/>
-                <label for="Evil">Evil</label>
-              </div>
-            </div>
-            <div class="col s12 alignment-second-line">
-              <div class="col s12 m4">
-                <input id="Lawful" name="alignment2" type="radio"/>
-                <label for="Lawful">Lawful</label>
-              </div>
-              <div class="col s12 m4">
-                <input id="Neutral2" name="alignment2" type="radio" checked/>
-                <label for="Neutral2">Neutral</label>
-              </div>
-              <div class="col s12 m4">
-                <input id="Chaotic" name="alignment2" type="radio"/>
-                <label for="Chaotic">Chaotic</label>
-              </div>
-            </div>
+            <h6>Choose the Deity's alignment:</h6>
+            <table class="striped centered">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th data-field="aligmentEvil">Evil</th>
+                  <th data-field="aligmentNeutral">Neutral</th>
+                  <th data-field="aligmentGood">Good</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-field="aligmentChaotic"><b>Chaotic</b></td>
+                  <td>
+                    <input id="ChaoticEvil" name="aligment" type="radio"/>
+                    <label for="ChaoticEvil"> </label>
+                  </td>
+                  <td>
+                    <input id="ChaoticNeutral" name="aligment" type="radio"/>
+                    <label for="ChaoticNeutral"> </label>
+                  </td>
+                  <td>
+                    <input id="ChaoticGood" name="aligment" type="radio"/>
+                    <label for="ChaoticGood"> </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-field="aligmentNeutra"><b>Neutral</b></td>
+                  <td>
+                    <input id="NeutralEvil" name="aligment" type="radio"/>
+                    <label for="NeutralEvil"> </label>
+                  </td>
+                  <td>
+                    <input id="NeutralNeutral" name="aligment" type="radio" checked/>
+                    <label for="NeutralNeutral"> </label>
+                  </td>
+                  <td>
+                    <input id="NeutralGood" name="aligment" type="radio"/>
+                    <label for="NeutralGood"> </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-field="aligmentLawful"><b>Lawful</b></td>
+                  <td>
+                    <input id="LawfulEvil" name="aligment" type="radio"/>
+                    <label for="LawfulEvil"> </label>
+                  </td>
+                  <td>
+                    <input id="LawfulNeutral" name="aligment" type="radio"/>
+                    <label for="LawfulNeutral"> </label>
+                  </td>
+                  <td>
+                    <input id="LawfulGood" name="aligment" type="radio"/>
+                    <label for="LawfulGood"> </label>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-          <a class="col s12 waves-effect waves-light btn">Salvar</a>
+          <div class="col s12">
+            <h6>Choose the Deity's divine domains:</h6>
+            <div class="chips chips-placeholder"></div>
+          </div>
+          <div class="input-field col s12">
+            <textarea id="deityDescription" name="deityDescriptio" class="materialize-textarea"></textarea>
+            <label for="deityDescriptio">Deity's Description</label>
+          </div>
+          <div class="col s12">
+            <a class="waves-effect waves-light btn">Salvar</a>
+          </div>
         </div>
       </form>
     </div>
 
     <script type="text/javascript" src="../lib/js/jquery.min.js"></script>
     <script type="text/javascript" src="../lib/js/hammer.min.js"></script>
+    <script type="text/javascript" src="../lib/js/auto-complete.js"></script>
     <script type="text/javascript" src="../lib/js/materialize.min.js"></script>
     <script type="text/javascript" src="view.js"></script>
   </body>
