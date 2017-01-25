@@ -78,16 +78,25 @@
               </tbody>
             </table>
           </div>
-          <div class="col s12">
+          <div class="col s12 margin-top--default">
             <h6>Choose the Deity's divine domains:</h6>
             <div class="chips chips-placeholder"></div>
+          </div>
+          <div class="input-field col s12">
+            <select id="favoredWeapon" name="favoredWeapon">
+              <option value="" disabled selected>Choose a weapon</option>
+              <option value="1">Option 1</option>
+              <option value="2">Option 2</option>
+              <option value="3">Option 3</option>
+            </select>
+            <label>Deity's favored weapon</label>
           </div>
           <div class="input-field col s12">
             <textarea id="deityDescription" name="deityDescriptio" class="materialize-textarea"></textarea>
             <label for="deityDescriptio">Deity's Description</label>
           </div>
           <div class="col s12">
-            <a class="waves-effect waves-light btn">Salvar</a>
+            <a class="col s12 waves-effect waves-light btn">Salvar</a>
           </div>
         </div>
       </form>

@@ -4,9 +4,9 @@ const Window = require('../window');
 
 const config = {
   width: 400,
-  height: 585,
+  height: 775,
   minWidth: 400,
-  minHeight: 585
+  minHeight: 300
 };
 
 const CreateDivinityWindow = {
