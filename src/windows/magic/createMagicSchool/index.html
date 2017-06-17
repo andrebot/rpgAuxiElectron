@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Magic School</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../lib/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../lib/css/material-icons.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class="row">
+      <h4 class="col s12">Create your Magic School:</h4>
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="name" name="name" type="text" class="validate" />
+            <label for="name">School's name</label>
+          </div>
+          <div class="input-field col s12">
+            <textarea id="schoolDescription" name="schoolDescription" class="materialize-textarea"></textarea>
+            <label for="schoolDescription">School's Description</label>
+          </div>
+          <div class="col s12">
+            <a class="col s12 waves-effect waves-light btn">Salvar</a>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script type="text/javascript" src="../../../lib/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../lib/js/hammer.min.js"></script>
+    <script type="text/javascript" src="../../../lib/js/materialize.min.js"></script>
+    <script type="text/javascript" src="view.js"></script>
+  </body>
+</html>

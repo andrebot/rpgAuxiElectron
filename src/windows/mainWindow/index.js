@@ -3,8 +3,10 @@
 const { Menu } = require('electron');
 const Window = require('../window');
 const CreateDeity = require('../createDeity');
+const CreateMagicSchools = require('../magic/createMagicSchool');
 
 const _createDeityView = CreateDeity();
+const _createMagicSchoolView = CreateMagicSchools();
 const _config = {
   width: 800,
   heigth: 600
@@ -19,6 +21,15 @@ const _menuTemplate = [
           {
             label: 'Create',
             click: _openCreateDeity
+          }
+        ]
+      },
+      {
+        label: 'Magic',
+        submenu: [
+          {
+            label: 'Create School',
+            click: _openCreateMagicSchool
           }
         ]
       }
@@ -36,6 +47,10 @@ function init() {
 
 function _openCreateDeity() {
   _createDeityView.open(true);
+}
+
+function _openCreateMagicSchool() {
+  _createMagicSchoolView.open(true);
 }
 
 function _configMenu() {
