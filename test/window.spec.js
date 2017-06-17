@@ -12,7 +12,7 @@ mockRequire('electron', {
   }
 });
 
-const Window = require('../src/window');
+const Window = require('../src/windows/window');
 
 chai.should();
 chai.use(sinonChai);

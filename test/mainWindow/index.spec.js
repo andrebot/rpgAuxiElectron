@@ -15,7 +15,7 @@ mockRequire('electron', {
   }
 });
 
-const MainWindow = require('../../src/mainWindow');
+const MainWindow = require('../../src/windows/mainWindow');
 
 chai.should();
 chai.use(sinonChai);

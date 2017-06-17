@@ -7,6 +7,7 @@
     "start": "gulp build && electron src/index.js",
     "build": "gulp build",
     "test": "gulp test",
+    "tdd": "gulp build && mocha -w --recursive",
     "test:coverage": "gulp test:coverage"
   },
   "repository": {
