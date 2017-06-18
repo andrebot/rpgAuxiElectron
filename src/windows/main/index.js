@@ -2,7 +2,7 @@
 
 const { Menu } = require('electron');
 const Window = require('../window');
-const CreateDeity = require('../createDeity');
+const CreateDeity = require('../deity/create');
 const CreateMagicSchools = require('../magic/createMagicSchool');
 
 const _createDeityView = CreateDeity();

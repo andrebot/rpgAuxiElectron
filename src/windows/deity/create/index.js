@@ -1,6 +1,6 @@
 'use strict';
 
-const Window = require('../window');
+const Window = require('../../window');
 
 const config = {
   width: 400,

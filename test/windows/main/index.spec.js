@@ -2,7 +2,7 @@
 
 const chai = require('chai');
 const sinonChai = require('sinon-chai');
-const MainWindow = require('../../../src/windows/mainWindow');
+const MainWindow = require('../../../src/windows/main');
 const {
   _buildFromTemplateSpy,
   _setApplicationMenuSpy

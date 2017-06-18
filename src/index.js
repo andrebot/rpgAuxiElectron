@@ -1,7 +1,7 @@
 'use strict';
 
 const { app, ipcMain } = require('electron');
-const MainWindow = require('./windows/mainWindow');
+const MainWindow = require('./windows/main');
 
 const mainWindow = MainWindow();
 
