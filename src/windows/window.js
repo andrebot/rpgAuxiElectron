@@ -19,6 +19,7 @@ function open(openDevTools = false) {
   }
 
   this.view.loadURL(`file://${this.pwd}/index.html`);
+
   if (openDevTools) {
     this.toggleDevTools();
   }

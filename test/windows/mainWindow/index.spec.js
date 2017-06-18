@@ -2,11 +2,11 @@
 
 const chai = require('chai');
 const sinonChai = require('sinon-chai');
-const MainWindow = require('../../src/windows/mainWindow');
+const MainWindow = require('../../../src/windows/mainWindow');
 const {
   _buildFromTemplateSpy,
   _setApplicationMenuSpy
-} = require('../electron.mock.spec');
+} = require('../../electron.mock.spec');
 
 chai.should();
 chai.use(sinonChai);

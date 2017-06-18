@@ -1,14 +1,14 @@
 'use strict';
 
-const chai        = require('chai');
-const sinon       = require('sinon');
-const sinonChai   = require('sinon-chai');
-const Window = require('../src/windows/window');
+const chai      = require('chai');
+const sinon     = require('sinon');
+const sinonChai = require('sinon-chai');
+const Window    = require('../../src/windows/window');
 const {
   _toggleDevToolsSpy,
   _loadURLSpy,
   _onSpy
-} = require('./electron.mock.spec');
+} = require('../electron.mock.spec');
 
 chai.should();
 chai.use(sinonChai);
@@ -33,6 +33,14 @@ describe('Window', function() {
   it('should have the main methods available', function() {
     this.window.open.should.exist;
     this.window.should.include.all.keys(['open', 'toggleDevTools']);
+  });
+
+  it('should not open a new window if there it is already opened', function () {
+    this.window.open();
+    this.window.open();
+
+    _onSpy.should.have.been.calledOnce;
+    _loadURLSpy.should.have.been.calledTwice;
   });
 
   it('should be able to open itself without the devtools', function() {
