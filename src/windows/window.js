@@ -11,7 +11,13 @@ const Window = {
 };
 
 function open(openDevTools = false) {
-  this.view = new BrowserWindow(this.config);
+  if (!this.view) {
+    this.view = new BrowserWindow(this.config);
+    this.view.on('closed', () => {
+      this.view = null;
+    });
+  }
+
   this.view.loadURL(`file://${this.pwd}/index.html`);
   if (openDevTools) {
     this.toggleDevTools();

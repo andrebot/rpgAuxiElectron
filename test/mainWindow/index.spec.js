@@ -1,21 +1,12 @@
 'use strict';
 
 const chai = require('chai');
-const sinon = require('sinon');
 const sinonChai = require('sinon-chai');
-const mockRequire = require('mock-require');
-
-const _buildFromTemplateSpy = sinon.spy();
-const _setApplicationMenuSpy = sinon.spy();
-
-mockRequire('electron', {
-  Menu: {
-    buildFromTemplate: _buildFromTemplateSpy,
-    setApplicationMenu: _setApplicationMenuSpy
-  }
-});
-
 const MainWindow = require('../../src/windows/mainWindow');
+const {
+  _buildFromTemplateSpy,
+  _setApplicationMenuSpy
+} = require('../electron.mock.spec');
 
 chai.should();
 chai.use(sinonChai);

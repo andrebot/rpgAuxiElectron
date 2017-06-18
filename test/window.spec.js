@@ -1,24 +1,20 @@
 'use strict';
 
-const chai = require('chai');
-const sinon = require('sinon');
-const sinonChai = require('sinon-chai');
-const mockRequire = require('mock-require');
-
-mockRequire('electron', {
-  BrowserWindow: function Brow() {
-    this.loadURL = sinon.spy();
-    this.toggleDevTools = sinon.spy();
-  }
-});
-
+const chai        = require('chai');
+const sinon       = require('sinon');
+const sinonChai   = require('sinon-chai');
 const Window = require('../src/windows/window');
+const {
+  _toggleDevToolsSpy,
+  _loadURLSpy,
+  _onSpy
+} = require('./electron.mock.spec');
 
 chai.should();
 chai.use(sinonChai);
 
 describe('Window', function() {
-  before(function() {
+  beforeEach(function() {
     this.defaultConfig = {
       config: {
         width: 800,
@@ -27,11 +23,16 @@ describe('Window', function() {
       pwd: `${__dirname}/assets`
     };
 
+    _toggleDevToolsSpy.reset();
+    _loadURLSpy.reset();
+    _onSpy.reset();
+
     this.window = Window(this.defaultConfig);
   });
 
   it('should have the main methods available', function() {
     this.window.open.should.exist;
+    this.window.should.include.all.keys(['open', 'toggleDevTools']);
   });
 
   it('should be able to open itself without the devtools', function() {
