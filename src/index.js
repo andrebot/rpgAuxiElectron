@@ -9,3 +9,7 @@ app.on('ready', () => {
   mainWindow.init(ipcMain);
   mainWindow.open();
 });
+
+app.on('window-all-closed', () => {
+  app.quit();
+});
