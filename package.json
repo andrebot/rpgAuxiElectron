@@ -8,6 +8,7 @@
   },
   "scripts": {
     "start": "gulp build && electron src/index.js",
+    "start-react": "gulp build && electron -r babel-register src/index.js",
     "build": "gulp build",
     "test": "gulp test",
     "tdd": "gulp build && mocha -w --recursive",
@@ -27,6 +28,8 @@
   },
   "homepage": "https://github.com/andrebot/rpgAuxiElectron#readme",
   "devDependencies": {
+    "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.24.1",
     "chai": "4.0.2",
     "eslint": "4.0.0",
     "eslint-config-airbnb": "15.0.1",
@@ -47,6 +50,10 @@
     "electron": "1.6.11",
     "jquery": "3.2.1",
     "js-autocomplete-tremby": "1.0.5",
-    "materialize-css": "0.98.2"
+    "materialize-css": "0.98.2",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.5",
+    "redux": "^3.7.1"
   }
 }
