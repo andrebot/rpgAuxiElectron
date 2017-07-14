@@ -7,7 +7,7 @@ const mainWindow = MainWindow();
 
 app.on('ready', () => {
   mainWindow.init(ipcMain);
-  mainWindow.open(true);
+  mainWindow.open(false);
 });
 
 app.on('window-all-closed', () => {

@@ -1,7 +1,7 @@
 'use strict';
 
 const { connect } = require('react-redux');
-const Main = require('./main');
+const CreateDeity = require('./create-deity');
 
 const mapStateToProps = function (state) {
   return {
@@ -11,4 +11,4 @@ const mapStateToProps = function (state) {
 
 module.exports = connect(
   mapStateToProps
-)(Main);
+)(CreateDeity);

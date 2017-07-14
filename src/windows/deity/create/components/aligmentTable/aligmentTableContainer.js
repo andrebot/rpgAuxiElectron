@@ -1,14 +1,14 @@
 'use strict';
 
 const { connect } = require('react-redux');
-const Main = require('./main');
+const AligmentTable = require('./aligmentTable');
 
 const mapStateToProps = function (state) {
   return {
-    name: state.name
+    alignmets: state.alignmets
   }
 };
 
 module.exports = connect(
   mapStateToProps
-)(Main);
+)(AligmentTable);

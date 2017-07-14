@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = (state = [], action) => {
+module.exports = (state = {}, action) => {
   switch (action.type) {
     default:
       return state;
